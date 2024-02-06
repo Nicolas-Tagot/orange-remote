@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Button,TouchableOpacity } from "react-native";
-
+import { sendAction } from '../services/sendAction'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const handleClick = (event) => {
-  const id = event.target.id
+const handleClick = (id: string): void => {
+  console.log('id', id)
   sendAction(id)
 }
 
@@ -22,15 +22,10 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <Button
-  icon={{
-    name: "arrow-right",
-    size: 15,
-    color: "white"
-  }}
   title="Button with icon object"
-  onPress={(e) => handleClick(e)}
+  onPress={() => handleClick("1")}
       />
-            <TouchableOpacity style={styles.button} onPress={onPress}>
+            <TouchableOpacity style={styles.button} onPress={() => handleClick('2')}>
         <Text>Press Here</Text>
       </TouchableOpacity>
       <Text>Home Screen</Text>
