@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
 
 const Single = (props: Props) => {
     const handleClick = (id: string): void => {
-        console.log('id', id)
         sendAction(id)
       }
     return    <TouchableOpacity style={styles.button} onPress={() => handleClick(props.value)}>

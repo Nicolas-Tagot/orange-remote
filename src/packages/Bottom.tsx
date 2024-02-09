@@ -15,8 +15,8 @@ const Bottom = () => {
     const bottom = require('../../assets/icons/min.png')
 
     return <View style={styles.container}>
-        <Duo top="" bottom="" topImage={top} bottomImage={bottom}/>
-        <Duo top="" bottom="" topImage={top} bottomImage={bottom}/>
+        <Duo top="402" bottom="403" topImage={top} bottomImage={bottom}/>
+        <Duo top="115" bottom="114" topImage={top} bottomImage={bottom}/>
     </View>
 }
 

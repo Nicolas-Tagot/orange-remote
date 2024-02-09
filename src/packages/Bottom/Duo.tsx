@@ -36,7 +36,6 @@ const styles = StyleSheet.create({
 const Duo = (props: Props) => {
 
     const handleClick = (id: string): void => {
-        console.log('id', id)
         sendAction(id)
       }
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, StyleSheet, TouchableOpacity, Image, Modal, Text, Pressable, Dimensions, SafeAreaView, TextInput } from "react-native"
+import { saveAdress } from "../services/adress";
 
 const _width  = Dimensions.get('screen').width * 0.5
 
@@ -70,6 +71,12 @@ const _width  = Dimensions.get('screen').width * 0.5
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [number, onChangeNumber] = React.useState(null);
+
+  const handleChange = (e) => {
+    onChangeNumber(e)
+    saveAdress(e)
+    
+  }
   const handleClick = () => {
     setIsOpen(!isOpen)
   }
@@ -96,7 +103,7 @@ const Header = () => {
             <SafeAreaView>
       <TextInput
         style={styles.input}
-        onChangeText={onChangeNumber}
+        onChangeText={handleChange}
         value={number}
         placeholder="192.168.1.1"
         keyboardType="numeric"

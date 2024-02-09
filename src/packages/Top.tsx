@@ -15,7 +15,7 @@ const Top = () => {
     const top = require('../../assets/icons/btn-on.png')
 
     return <View style={styles.container}>
-        <Single value="4" image={top} />
+        <Single value="116" image={top} />
     </View>
 }
 
